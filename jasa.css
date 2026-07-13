@@ -1,0 +1,271 @@
+/* RESET & VARIABLE DESIGN */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --clean-blue: #0284c7;     /* Biru air segar cerah */
+    --light-blue: #e0f2fe;     /* Biru sangat muda untuk background/aksen */
+    --text-dark: #1e293b;      /* Abu-abu gelap untuk keterbacaan teks utama */
+    --text-gray: #64748b;      /* Abu-abu sedang untuk deskripsi */
+    --border-color: #e2e8f0;   /* Garis pembatas tipis */
+    --light-bg: #f8fafc;       /* Latar belakang terang bersih */
+}
+
+body {
+    background-color: #ffffff;
+    color: var(--text-dark);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.laundry-section { padding: 90px 0; }
+.bg-light { background-color: var(--light-bg); }
+
+/* SECTION HEADER CENTERED */
+.title-center {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.tagline {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--clean-blue);
+    display: block;
+    margin-bottom: 8px;
+}
+.title-center h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+.line-blue {
+    width: 50px;
+    height: 3px;
+    background-color: var(--clean-blue);
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+/* NAVIGATION STYLE (FRESH & FLAT) */
+.laundry-nav {
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+}
+.logo-laundry {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--text-dark);
+    text-decoration: none;
+}
+.logo-laundry span { color: var(--clean-blue); }
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--clean-blue); }
+
+.btn-pickup {
+    background-color: var(--clean-blue);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+.btn-pickup:hover { background-color: #0369a1; }
+.hamburger-btn { display: none; background: none; border: none; cursor: pointer; }
+
+/* HERO SECTION LAYOUT */
+.hero-laundry {
+    padding: 70px 0;
+    background: linear-gradient(135deg, #ffffff 60%, #f0f9ff 100%);
+}
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 40px;
+}
+.badge-clean {
+    font-size: 0.8rem;
+    background-color: var(--light-blue);
+    color: var(--clean-blue);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: 600;
+    display: inline-block;
+}
+.hero-content h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 20px 0;
+}
+.hero-content h1 span { color: var(--clean-blue); }
+.hero-content p {
+    font-size: 1.05rem;
+    color: var(--text-gray);
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+.hero-buttons { display: flex; gap: 15px; }
+
+.btn-main {
+    background-color: var(--clean-blue);
+    color: white;
+    padding: 12px 26px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+.btn-main:hover { background-color: #0369a1; }
+.btn-sub {
+    border: 1px solid var(--border-color);
+    color: var(--text-dark);
+    padding: 12px 26px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+.btn-sub:hover { background-color: var(--light-bg); }
+
+.img-container {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+}
+.img-container img { width: 100%; display: block; object-fit: cover; }
+
+/* SERVICE CARDS WRAPPER */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+.service-card {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    padding: 40px 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+.icon-circle {
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+    background-color: var(--light-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+}
+.service-card h3 { font-size: 1.25rem; margin-bottom: 12px; font-weight: 600; }
+.service-card p { font-size: 0.95rem; color: var(--text-gray); line-height: 1.5; }
+
+/* STEPS FLOW ALUR KERJA */
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+.step-item { text-align: center; position: relative; }
+.step-number {
+    font-size: 1.1rem; font-weight: 700; color: var(--clean-blue);
+    width: 40px; height: 40px; border: 2px solid var(--clean-blue);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 15px; border-radius: 50%; background-color: white;
+}
+.step-item h4 { font-size: 1.1rem; margin-bottom: 8px; font-weight: 600; }
+.step-item p { font-size: 0.9rem; color: var(--text-gray); line-height: 1.4; }
+
+/* CLEAN LAUNDRY TARIF TABLE */
+.price-table-wrapper {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.laundry-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+.laundry-table th, .laundry-table td {
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border-color);
+}
+.laundry-table th {
+    background-color: var(--light-blue);
+    color: var(--clean-blue);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+.laundry-table td { font-size: 0.95rem; }
+.price-text { font-weight: 700; color: var(--clean-blue); }
+.laundry-table tr:last-child td { border-bottom: none; }
+
+/* FOOTER */
+.laundry-footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    padding: 25px 0;
+    font-size: 0.85rem;
+}
+.footer-flex { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+
+/* MOBILE BREAKPOINTS */
+@media (max-width: 991px) {
+    .hero-grid { grid-template-columns: 1fr; text-align: center; }
+    .hero-content h1 { font-size: 2.2rem; }
+    .hero-buttons { justify-content: center; }
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; position: absolute; top: 100%; left: 0; width: 100%;
+        background-color: white; flex-direction: column; padding: 20px; text-align: center;
+        border-bottom: 1px solid var(--border-color); gap: 15px; box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+    }
+    .nav-links.active { display: flex; }
+    .hamburger-btn {
+        display: flex; flex-direction: column; gap: 4px; width: 22px;
+    }
+    .hamburger-btn span { width: 100%; height: 2px; background-color: var(--text-dark); }
+    .nav-actions .btn-pickup { display: none; } /* Tersembunyi di navbar mobile, fokus ke tombol hero */
+    .laundry-section { padding: 60px 0; }
+    .footer-flex { flex-direction: column; text-align: center; }
+}

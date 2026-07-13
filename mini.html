@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CeriaMart — Belanja Dekat, Hemat & Happy!</title>
+    <link rel="stylesheet" href="mini.css">
+    <!-- Google Fonts: Fredoka untuk kesan bulat/fun & Quicksand untuk teks yang ramah -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVIGASI UTAMA (CERIA & POP) -->
+    <nav class="happy-nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">🤩 Ceria<span>Mart</span></a>
+            <ul class="nav-links" id="menu-list">
+                <li><a href="#hero">Beranda</a></li>
+                <li><a href="#promo">Promo Seru</a></li>
+                <li><a href="#kategori">Kategori</a></li>
+                <li><a href="#testi">Kata Mereka</a></li>
+                <li><a href="#lokasi">Mampir Yuk</a></li>
+            </ul>
+            <div class="nav-right">
+                <a href="https://wa.me/6281234567890?text=Halo%20CeriaMart,%20saya%20mau%20tanya%20stok%20barang" target="_blank" class="btn-chat">Tanya Stok 🛍️</a>
+                <button class="menu-toggle" id="mobile-toggle">🎈</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION (FUN & COLORFUL) -->
+    <section id="hero" class="hero-playful">
+        <div class="hero-bubble-1"></div>
+        <div class="hero-bubble-2"></div>
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <span class="happy-badge">✨ Tetangga Favorit Semua Orang</span>
+                <h1>Belanja Puas, <br>Dompet Tetap <span>Tersenyum!</span></h1>
+                <p>CeriaMart hadir membawa ribuan produk segar, camilan hits, hingga kebutuhan dapur harianmu dengan harga ramah kantong dan pelayanan super ceria!</p>
+                <div class="hero-buttons">
+                    <a href="#promo" class="btn-primary">Lihat Diskon Hari Ini! 🎉</a>
+                    <a href="#lokasi" class="btn-secondary">Cari Toko Terdekat</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-blob">
+                    <img src="https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=600" alt="Belanja Seru di CeriaMart">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROMO MINGGUAN (GANTI PAKET HARGA) -->
+    <section id="promo" class="section-happy bg-soft-blue">
+        <div class="container">
+            <div class="section-header">
+                <h2>Banjir <span>Promo Seru!</span> 🛒</h2>
+                <p>Jangan sampai kehabisan, harga miring ini cuma sampai akhir minggu ya!</p>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Produk 1 -->
+                <div class="product-card">
+                    <div class="promo-badge">Diskon 20%</div>
+                    <div class="prod-img-box">
+                        <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?w=400" alt="Susu Segar">
+                    </div>
+                    <div class="prod-info">
+                        <span class="prod-cat">Minuman</span>
+                        <h3>Milkies Susu Segar 1L</h3>
+                        <div class="price-box">
+                            <span class="old-price">Rp 25.000</span>
+                            <span class="new-price">Rp 19.900</span>
+                        </div>
+                        <a href="https://wa.me/6281234567890?text=Saya%20mau%20pesan%20Milkies%20Susu%20Segar%201L%20promo" target="_blank" class="btn-buy">Ambil Slot 📥</a>
+                    </div>
+                </div>
+
+                <!-- Produk 2 (Highlight / Paling Dicari) -->
+                <div class="product-card hot-deal">
+                    <div class="promo-badge yellow">Beli 2 Gratis 1</div>
+                    <div class="prod-img-box">
+                        <img src="https://images.unsplash.com/photo-1599490659213-e2b9527bb087?w=400" alt="Camilan Keripik">
+                    </div>
+                    <div class="prod-info">
+                        <span class="prod-cat">Camilan Hits</span>
+                        <h3>Crunchy-O Potato Chips</h3>
+                        <div class="price-box">
+                            <span class="single-price">Rp 12.500 <small>/pcs</small></span>
+                        </div>
+                        <a href="https://wa.me/6281234567890?text=Saya%20mau%20pesan%20Promo%20Beli%202%20Gratis%201%20Crunchy-O" target="_blank" class="btn-buy yellow">Serbu Promo! 🚀</a>
+                    </div>
+                </div>
+
+                <!-- Produk 3 -->
+                <div class="product-card">
+                    <div class="promo-badge">Hemat Banget</div>
+                    <div class="prod-img-box">
+                        <img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=400" alt="Detergen Laundry">
+                    </div>
+                    <div class="prod-info">
+                        <span class="prod-cat">Kebutuhan Rumah</span>
+                        <h3>SoClean Detergen Bubuk 800g</h3>
+                        <div class="price-box">
+                            <span class="old-price">Rp 32.000</span>
+                            <span class="new-price">Rp 26.400</span>
+                        </div>
+                        <a href="https://wa.me/6281234567890?text=Saya%20mau%20pesan%20SoClean%20Detergen%20800g%20promo" target="_blank" class="btn-buy">Ambil Slot 📥</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KATEGORI POPULER (GANTI BEFORE & AFTER) -->
+    <section id="kategori" class="section-happy">
+        <div class="container">
+            <div class="section-header">
+                <h2>Kelompok <span>Belanja Belanjau</span> 🍫</h2>
+                <p>Cari apa saja jadi gampang karena semuanya sudah ditata rapi!</p>
+            </div>
+            
+            <div class="category-grid">
+                <div class="category-box color-1">
+                    <div class="cat-icon">🍎</div>
+                    <h4>Buah & Sayur Segar</h4>
+                    <p>Didatangkan langsung dari petani lokal setiap pagi hari.</p>
+                </div>
+                <div class="category-box color-2">
+                    <div class="cat-icon">🍦</div>
+                    <h4>Es Krim & Frozen</h4>
+                    <p>Area penuh kebahagiaan manis pendingin harimu.</p>
+                </div>
+                <div class="category-box color-3">
+                    <div class="cat-icon">🧸</div>
+                    <h4>Kebutuhan Si Kecil</h4>
+                    <p>Popok, susu formula, dan mainan seru yang aman.</p>
+                </div>
+                <div class="category-box color-4">
+                    <div class="cat-icon">🍞</div>
+                    <h4>Bakery & Roti Pagi</h4>
+                    <p>Roti lembut aneka rasa yang dipanggang hangat terus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KATA MEREKA / TESTIMONI -->
+    <section id="testi" class="section-happy bg-soft-orange">
+        <div class="container">
+            <div class="section-header">
+                <h2>Gosip Paling <span>Ceria</span> 💬</h2>
+                <p>Alasan kenapa warga kompleks selalu betah bolak-balik ke toko kami.</p>
+            </div>
+            
+            <div class="review-slider">
+                <div class="review-bubble">
+                    <p>"Tempatnya bersih banget, mbak dan mas kasirnya super ramah, sering diajak bercanda anak saya. Plus, es krim cokelatnya selalu penuh stoknya!"</p>
+                    <h5>— Mama Riko, Pelanggan Setia A5</h5>
+                </div>
+                <div class="review-bubble">
+                    <p>"Paling suka beli jajanan import dan roti panggangnya di sini. Promonya ganti-ganti tiap minggu, jadi gak bikin dompet anak kosan teriak ketakutan."</p>
+                    <h5>— Kak Aldi, Mahasiswa Semester 3</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOKASI TOKO -->
+    <section id="lokasi" class="section-happy">
+        <div class="container text-center">
+            <div class="section-header">
+                <h2>Yuk, <span>Mampir Main!</span> 🗺️</h2>
+                <p>Jl. Keriangan Raya No. 42 (Sebelah Taman Bermain Kompleks Asri), Bandung</p>
+            </div>
+            <div class="map-wrapper">
+                <iframe src="http://googleusercontent.com/maps.google.com/6" width="100%" height="340" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLOATING CHAT CS -->
+    <a href="https://wa.me/6281234567890?text=Halo%20CeriaMart!%20Bisa%20tolong%20info%20promo%20terbaru%20minggu%20ini?" class="floating-happy-btn" target="_blank">
+        <span class="btn-emoji">Jastip WA 🛵</span>
+    </a>
+
+    <!-- HAPPY FOOTER -->
+    <footer class="happy-footer">
+        <p>Dibuat dengan 💖 dan Senyuman Lebar • Demonstrasi Website MiniMarket</p>
+    </footer>
+
+    <script src="mini.js"></script>
+</body>
+</html>

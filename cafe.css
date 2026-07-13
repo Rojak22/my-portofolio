@@ -1,0 +1,312 @@
+/* RESET & FONTS STYLING */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* PALET RETRO WARM AESTHETIC */
+:root {
+    --cream-light: #fbf9f4; /* Krem hangat pucat untuk latar utama */
+    --cream-dark: #f3eee3;  /* Krem agak gelap untuk pemisah section */
+    --espresso: #2e2520;     /* Cokelat gelap kopi menggantikan hitam */
+    --terracotta: #d96b43;   /* Oranye senja bata untuk warna aksen aktif */
+    --text-muted: #6e645e;   /* Warna abu kecokelatan tulisan deskripsi */
+}
+
+body {
+    background-color: var(--cream-light);
+    color: var(--espresso);
+}
+
+/* SIDEBAR LAYOUT (Berbeda total dari navbar atas biasa) */
+.header-side {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100vh;
+    background-color: var(--espresso);
+    color: var(--cream-light);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 100;
+    border-right: 1px solid rgba(255,255,255,0.05);
+}
+
+.cafe-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--cream-light);
+    text-decoration: none;
+}
+.cafe-logo span { color: var(--terracotta); }
+
+.side-nav { margin: 40px 0; }
+.nav-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.nav-menu a {
+    color: var(--cream-dark);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+.nav-menu a:hover, .nav-menu a.active {
+    color: var(--terracotta);
+    padding-left: 8px;
+}
+
+.open-hours-badge p {
+    font-size: 0.8rem;
+    color: var(--terracotta);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+.open-hours-badge span { font-size: 0.9rem; color: #fff; opacity: 0.8;}
+
+.hamburger { display: none; }
+
+/* MAIN CONTENT WRAPPER WRAP */
+.main-wrapper {
+    margin-left: 280px; /* Memberi ruang untuk sidebar di sebelah kiri */
+    min-height: 100vh;
+}
+
+.cafe-section {
+    padding: 100px 60px;
+}
+.bg-cream-dark { background-color: var(--cream-dark); }
+
+.section-header-left {
+    max-width: 600px;
+    margin-bottom: 60px;
+}
+.section-header-left h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+.section-header-left h2 span { color: var(--terracotta); }
+.section-header-left p { color: var(--text-muted); font-size: 1.05rem; }
+
+/* HERO SPLIT SECTION ASIMETRIS */
+.hero-split {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    background-color: var(--cream-light);
+}
+.hero-text-side {
+    flex: 1;
+    padding: 80px 60px;
+}
+.sub-intro {
+    font-size: 0.85rem;
+    color: var(--terracotta);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 15px;
+}
+.hero-text-side h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+.hero-text-side h1 em { font-weight: 400; color: var(--terracotta); }
+.hero-text-side p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+.hero-actions { display: flex; gap: 20px; }
+.btn-terracotta {
+    background-color: var(--terracotta);
+    color: #fff;
+    padding: 14px 30px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+.btn-terracotta:hover { background-color: #b8522d; }
+.btn-outline {
+    border: 1px solid var(--espresso);
+    color: var(--espresso);
+    padding: 14px 30px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+.btn-outline:hover { background-color: var(--espresso); color: var(--cream-light); }
+
+.hero-img-side {
+    flex: 1;
+    height: 100vh;
+}
+.hero-img-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* CAFE MENU GRID DESIGN */
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 60px;
+}
+.menu-category h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--terracotta);
+    margin-bottom: 30px;
+}
+.menu-item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+    border-bottom: 1px dashed rgba(46, 37, 32, 0.15);
+}
+.menu-details h4 { font-size: 1.1rem; font-weight: 600; margin-bottom: 6px; }
+.hot-tag {
+    font-size: 0.7rem;
+    background-color: var(--terracotta);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 2px;
+    margin-left: 6px;
+}
+.menu-details p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.4; }
+.menu-price { font-weight: 700; color: var(--espresso); font-size: 1.1rem; }
+
+/* AMBIENCE GALLERY CARD GRID */
+.ambience-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+.gallery-card {
+    background-color: var(--cream-light);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(46, 37, 32, 0.04);
+}
+.gallery-card img { width: 100%; height: 300px; object-fit: cover; display: block;}
+.gallery-info { padding: 25px; }
+.gallery-info h4 { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 10px; }
+.gallery-info p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; }
+
+/* STORIES / QUOTE BOX */
+.quote-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+.quote-box {
+    border-top: 2px solid var(--terracotta);
+    padding: 30px 0;
+}
+.quote-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+.quote-author { font-size: 0.85rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; }
+
+/* LOKASI / MAP */
+.map-frame { box-shadow: 0 20px 40px rgba(46,37,32,0.08); }
+
+/* FLOATING BUTTON (WARM ORANGE WHATSAPP) */
+.wa-cafe-btn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background-color: var(--terracotta);
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 8px 24px rgba(217, 107, 67, 0.3);
+    z-index: 99;
+    transition: transform 0.2s, background 0.2s;
+}
+.wa-cafe-btn:hover { transform: translateY(-2px); background-color: #b8522d; }
+.wa-vector { width: 20px; height: 20px; }
+
+/* FOOTER */
+.cafe-footer {
+    text-align: center;
+    padding: 40px;
+    border-top: 1px solid rgba(46, 37, 32, 0.08);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* MEDIA BREAKPOINT LAYOUT (TABLET & HP) */
+@media (max-width: 1024px) {
+    .header-side {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        align-items: center;
+        padding: 20px 30px;
+    }
+    .side-nav {
+        display: none; /* Disembunyikan, nanti dimunculkan lewat JS */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--espresso);
+        padding: 30px;
+        margin: 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .side-nav.show-menu { display: block; }
+    .open-hours-badge { display: none; }
+    
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        background: none;
+        border: none;
+        gap: 6px;
+        cursor: pointer;
+    }
+    .hamburger .line { width: 24px; height: 2px; background-color: var(--cream-light); transition: 0.3s; }
+
+    .main-wrapper { margin-left: 0; padding-top: 70px; }
+    .hero-split { flex-direction: column-reverse; height: auto; }
+    .hero-img-side { width: 100%; height: 50vh; }
+    .hero-text-side { text-align: center; padding: 60px 30px; }
+    .hero-text-side h1 { font-size: 2.8rem; }
+    .hero-actions { justify-content: center; }
+    .cafe-section { padding: 70px 30px; }
+    .wa-cafe-btn span { display: none; }
+    .wa-cafe-btn { padding: 16px; border-radius: 50%; bottom: 30px; right: 30px; }
+}
